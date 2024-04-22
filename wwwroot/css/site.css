@@ -1,0 +1,136 @@
+﻿/* Set up basic styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+#sidebar {
+  width: 200px;
+  height: 85%;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  top: 60px;
+  overflow-y: auto;
+  padding-top: 20px;
+  z-index: 1000; /* Ensure the sidebar is above other elements */
+}
+
+#content-container {
+  position: right;
+  left: 200px; /* Adjusted to accommodate the width of the sidebar */
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+
+.content-section {
+  width: 100%;
+}
+
+#sidebar h2 {
+  padding: 10px;
+}
+
+#sidebar ul {
+  list-style-type: none;
+}
+
+#sidebar ul li {
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+  background-color: #555;
+}
+
+#main-content {
+  margin-left: 220px;
+  padding: 20px;
+  z-index: 1;
+  display: flex;
+  flex-grow: 1;
+}
+
+#past-workouts {
+  margin-left: 220px;
+  padding: 20px;
+  z-index: 1;
+  display: flex;
+  flex-grow: 1;
+}
+
+/* Style navigation links */
+#main-content h2 {
+  margin-top: 20px;
+}
+
+/* Style past workouts section */
+#past-workouts {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style start workout section */
+#start-workout {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style home section */
+#menu {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add this to the CSS file */
+
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+}
+
+.sidebar-header h2 {
+  margin-bottom: 10px;
+}
+
+.sidebar-header p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.character-stats {
+  padding: 20px;
+  background-color: #222;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.character-stats p {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.character-stats span {
+  font-weight: bold;
+  margin-left: 10px;
+}

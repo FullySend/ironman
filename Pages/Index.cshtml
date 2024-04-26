@@ -8,24 +8,51 @@
 
 <body>
     <div id="sidebar">
-        <div class="sidebar-header">
-            <h2>Fitness Tracker</h2>
-            <p>Welcome, [User Name]!</p>
-        </div>
-        <div class="character-stats">
-            <p>Strength: <span id="strength">10</span></p>
-            <p>Agility: <span id="agility">8</span></p>
-            <p>Stamina: <span id="stamina">12</span></p>
-        </div>
-        <h2></h2>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="#past-workouts">Past Workouts</a></li>
-            <li><a href="#start-workout">Start Workout</a></li>
-            <li><a href="#goals">My Goals</a></li>
+            <li>
+                <a href="#home" class="logo">
+                    <span class="icon"><i class="fa-solid fa-co"></i>
+                        <span class="text">Iron Man Fit</span>
+                </a>
+            </li>
+            <li>
+                <a href="#home">
+                    <span class="icon"><i class="fa-solid fa-house"></i>
+                        <span class="text">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#home">
+                    <span class="icon"><i class="fa-solid fa-user"></i>
+                        <span class="text">Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="#start-workout">
+                    <span class="icon"><i class="fa-solid fa-running"></i>
+                        <span class="text">Start Workout</span>
+                </a>
+            </li>
+            <li>
+                <a href="#past-workouts">
+                    <span class="icon"><i class="fa-solid fa-clock"></i>
+                        <span class="text">Past Workouts</span>
+                </a>
+            </li>
+            <li>
+                <a href="#routines">
+                    <span class="icon"><i class="fa-solid fa-bullseye"></i>
+                        <span class="text">Routines</span>
+                </a>
+            </li>
+            <li>
+                <a href="#home">
+                    <span class="icon"><i class="fa-solid fa-sign-out"></i>
+                        <span class="text">Logout</span>
+                </a>
+            </li>
         </ul>
     </div>
-
     <div id="main-content">
         <div id="past-workouts" class="content-section">
             <h2>Past Workouts</h2>
@@ -38,9 +65,9 @@
                         <th>Distance (miles)</th>
                     </tr>
                 </thead>
-            <tbody id="workout-list">
+                <tbody id="workout-list">
 
-            </tbody>
+                </tbody>
             </table>
         </div>
 
@@ -67,7 +94,28 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
+        <div id="routines" class="content-section">
+            <h2>Routines</h2>
 
+            <!-- Form for creating a new routine -->
+            <form id="create-routine-form">
+                <div class="form-group">
+                    <label for="routine-name">Routine Name:</label>
+                    <input type="text" class="form-control" id="routine-name" placeholder="Enter routine name" required>
+                </div>
+                <div class="form-group">
+                    <label for="exercise-list">Exercises:</label>
+                    <textarea class="form-control" id="exercise-list" placeholder="Enter exercises (one per line)"
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Routine</button>
+            </form>
+
+            <!-- Display user-created routines here -->
+            <div id="user-routines">
+                <!-- User-created routines will be dynamically added here -->
+            </div>
+        </div> 
 
     </div>
 

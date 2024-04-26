@@ -1,25 +1,38 @@
-﻿/* Set up basic styles */
+﻿@import url(‘https://fonts.googleapis.com/css?family=Poppins’);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #607D8B;
 }
 
 #sidebar {
-  width: 200px;
-  height: 85%;
+  width: 75px;
+  transition: width 0.6s ease;
+  height: 100%; /* 85%*/
   background-color: #333;
   color: #fff;
   position: fixed;
   left: 0;
-  top: 60px;
-  overflow-y: auto;
-  padding-top: 20px;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 10px;
+  transition: 0.6s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1000; /* Ensure the sidebar is above other elements */
 }
 
+#sidebar:hover {
+  width:250px;
+  transition: 0.6s ease;
+} 
+
 #content-container {
   position: right;
-  left: 200px; /* Adjusted to accommodate the width of the sidebar */
   right: 0;
   top: 0;
   bottom: 0;
@@ -33,27 +46,77 @@ body {
   width: 100%;
 }
 
-#sidebar h2 {
-  padding: 10px;
-}
-
 #sidebar ul {
-  list-style-type: none;
+  position: relative;
+  height: 97vh;
 }
 
 #sidebar ul li {
-  padding: 10px;
+  list-style: none;
+  margin: 5px 0;
+}
+
+#sidebar ul li:hover {
+  background: #FF9800;
+  transition: 0.3s ease;
 }
 
 #sidebar ul li a {
-  color: #fff;
+  position: relative;
+  display: flex;
+  white-space: nowrap;
   text-decoration: none;
+  color:#fff;
 }
 
-#sidebar ul li a:hover {
-  background-color: #555;
+#sidebar ul li .logo {
+  margin-bottom: 80px;
 }
 
+#sidebar ul li .logo .text {
+  font-size: 18px;
+  font-weight: 600;
+} 
+
+#sidebar ul li:last-child {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+ #sidebar ul li a .icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 75px;
+  height: 60px;
+  font-size: 22px;
+  margin-right: 20px;
+  margin-left: -40px;
+}
+#sidebar ul li a .text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  font-weight: 500;
+  margin-left: -20px;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.6s ease, margin-left 0.6s ease;
+} 
+#sidebar:hover ul li a .text {
+  width: 180px;
+  margin-left: 20px;
+}
+#sidebar:hover ul li a .icon {
+  margin-left: 10px;
+  transition: margin-left 0.6s ease;
+}
 #main-content {
   margin-left: 220px;
   padding: 20px;
@@ -77,10 +140,18 @@ body {
 
 /* Style past workouts section */
 #past-workouts {
-  background-color: #fff;
+  margin: 0 auto; /* Center the content horizontally */
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  display: flex;
+  flex-grow: 1;
+  max-width: 600px; /* Set a max-width to prevent it from stretching across the entire screen */
+}
+
+#goals {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
 }
 
 /* Style start workout section */
@@ -99,23 +170,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Add this to the CSS file */
 
-.sidebar-header {
-  padding: 20px;
-  text-align: center;
-  background-color: #222;
-  color: #fff;
-}
-
-.sidebar-header h2 {
-  margin-bottom: 10px;
-}
-
-.sidebar-header p {
-  font-size: 14px;
-  margin-top: 5px;
-}
 
 .character-stats {
   padding: 20px;

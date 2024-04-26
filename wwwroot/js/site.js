@@ -33,12 +33,14 @@ document.getElementById('workout-form').addEventListener('submit', function(even
 // Get references to the menu items
 const pastWorkoutsMenu = document.querySelector('a[href="#past-workouts"]');
 const startWorkoutMenu = document.querySelector('a[href="#start-workout"]');
+const routinesMenu = document.querySelector('a[href="#routines"]');
 const menuMenu = document.querySelector('a[href="#menu"]');
 
 // Get references to the content sections
 const pastWorkoutsSection = document.getElementById('past-workouts');
 const startWorkoutSection = document.getElementById('start-workout');
 const menuSection = document.getElementById('menu');
+const routinesSection = document.getElementById('routines');
 
 // Hide all content sections initially
 const contentSections = document.querySelectorAll('.content-section');
@@ -50,6 +52,11 @@ contentSections.forEach(section => {
 pastWorkoutsMenu.addEventListener('click', () => {
     hideAllSections();
     pastWorkoutsSection.style.display = 'block';
+});
+
+routinesMenu.addEventListener('click', () => {
+    hideAllSections();
+    routinesSection.style.display = 'block';
 });
 
 startWorkoutMenu.addEventListener('click', () => {
@@ -68,3 +75,12 @@ function hideAllSections() {
         section.style.display = 'none';
     });
 }
+// const sidebar = document.getElementById('sidebar');
+
+// sidebar.addEventListener('mouseenter', () => {
+//     sidebar.style.width = '250px';
+// });
+
+// sidebar.addEventListener('mouseleave', () => {
+//     sidebar.style.width = '100px'; // Adjust the width as needed
+// });
